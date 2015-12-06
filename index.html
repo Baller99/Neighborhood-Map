@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neighborhood Map Project</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/simple-sidebar.css" rel="stylesheet">
+		
+</head>
+<body>
+	<div id="wrapper">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <div class="list" >
+                    <div class="search">
+                        <h1 class="mainTitle">Downton Wichita Map</h1>
+                        <h2 class="title">Bars in Downtown:</h2>
+                        <input type="text" data-bind="textInput: searchString" placeholder="Filter by Name" />
+                    </div>
+                    <div class="places">
+                        <ul class="sidebar-nav" data-bind="foreach: filteredLocations">
+                            <li><span data-bind="text: name, click: $parent.clickHandler" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Map -->
+            <div id="page_content_wrapper">
+                <div id="map-canvas"></div>
+                <div class="toggle_btn">
+                    <a href="#menu-toggle" class="btn" id="menu-toggle" >Show Menu</a>
+                </div>
+            </div>
+        </div>
+<script type='text/javascript' src='js/knockout-3.4.0.js'></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANKzgUnqAg-fRvQYE_ik0ppXJnRysV-es"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ <script src="js/model.js"></script>
+<script src = "js/app.js"></script>
+<!--Toggle Sidebar-->
+<script>
+	$("#menu-toggle").click(function(e) {
+    	e.preventDefault();
+    	$("#wrapper").toggleClass("toggled");
+    	});
+</script>
+</body>
+</html>
