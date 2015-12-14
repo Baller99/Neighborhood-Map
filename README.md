@@ -10,5 +10,5 @@ Directions to open:
 # APIs
 * Google Maps API
 * Google Places API
-* Foursqaure API
+* Foursquare API
 
