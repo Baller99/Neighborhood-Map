@@ -1,55 +1,33 @@
-body,
-html {
+﻿#content {
     height: 100%;
     width: 100%;
-    background-color: #fff;
-} 
-
+}
 #map-canvas {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	float: right;
-	z-index: 1;
-}
-
-.toggle_btn {
-	position: absolute; 
-	top: 0px; 
-	right: 80px; 
-	border: solid;
-	background-color: #5f84f2;
-	z-index: 99;
-}
-
-.btn {
-	font-family: 'Fjalla One', sans-serif;
-	color:#fff;
-}
-
-.list {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 20px;
-    width: auto;
+    width: 100%;
     height: 100%;
-    float: left;
-    padding-left: 10px;
+    position: absolute;
+    float: right;
+    z-index: 1;
 }
-
-.list:hover span{
-  color:#fff;
+.btn {
+    font-family: 'Fjalla One', sans-serif;
+    background-color: #5f84f2;
+    color: #fff;
 }
-
-.mainTitle {
-	font-family: 'Fjalla One', sans-serif;
-	font-size: 30px;
-	color: #fff;
-	text-align: left;
-	padding-right: 50%;
-	
+.sidebar {
+    z-index: 50;
+    position: fixed;
+    left: 20px;
+    top: 2px;
 }
-
-.title {
+h1#mainTitle {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-align: left;
+    padding-right: 50%;
+}
+h2#title {
     font-family: 'Fjalla One', sans-serif;
     font-size: 25px;
     color: #fff;
@@ -58,45 +36,95 @@ html {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
-
-#popupTitle {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 30px;
+ul {
+    list-style: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+li {
+    padding-left: 0;
+    margin: 0;
+}
+li p {
     text-align: center;
+    padding: 5px;
+    margin: 0;
 }
-
-.search {
-  z-index: 50;
-  position: fixed;
-  left: 20px;
-  top: 2px;
+p.name {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
 }
-
+#search {
+    text-align: center;
+    background-color: #fff;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    margin-right: 12px;
+    width: 15%;
+}
+.controls {
+    margin-top: 16px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
 #search-input {
-  background-color: #fff;
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  margin-left: 12px;
-  padding: 0 11px 0 13px;
-  text-overflow:ellipsis;
-  width: 300px;
+    text-align: center;
+    background-color: #fff;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-right: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 15%;
+}
+.gm-style {
+    padding: 10px;
+    background-color: #48b5e9;
+    color: black;
+    margin: 1px;
+    width: 350px;
+    top: 0;
+    left: 0;
+    border-radius: 2px 2px 0 0; /* In accordance with the rounding of the default infowindow corners. */
 }
 
+.infobox-wrapper {
+    display: none;
+}
 /*Copied from https://css-tricks.com/snippets/css/style-placeholder-text/ */
+
 ::-webkit-input-placeholder {
-   color: #000;
+    color: #000;
 }
-:-moz-placeholder { /* Firefox 18- */
-   color: #000;  
+:-moz-placeholder {
+    /* Firefox 18- */
+    
+    color: #000;
 }
-::-moz-placeholder {  /* Firefox 19+ */
-   color: #000;  
+::-moz-placeholder {
+    /* Firefox 19+ */
+    
+    color: #000;
 }
-:-ms-input-placeholder {  
-   color: #000;  
+:-ms-input-placeholder {
+    color: #000;
 }
-
-
-
+@media only screen and (min-device-width: 300px) {
+    #wrapper,
+    #search,
+    .gm-style
+    {
+        display: inline;
+    }
+}
